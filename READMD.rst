@@ -1,17 +1,17 @@
 ============
-Organization
+Device activity
 ============
 
-Organization is a simple Django app that adds user-managed, multi-user groups to your Django project.
+Device activity is a simple Django app that records a user device activity.
 
 Detailed documentation is in the "docs" directory.
 
 Quick start
 -----------
 
-1. Add "organizations" to your INSTALLED_APPS setting like this::
+1. Add "device_activity" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'organizations',
+        'device_activity',
     ]
