@@ -18,6 +18,11 @@ setup(
     url='https://www.example.com/',
     author='Elliot Lunness',
     author_email='elliotlunness@lazercube.com',
+    install_requires=[
+        'pyyaml',
+        'ua-parser',
+        'user-agents'
+    ],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
