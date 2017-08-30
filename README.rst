@@ -9,7 +9,7 @@ Detailed documentation is in the "docs" directory.
 Quick start
 -----------
 
-1. Install django-device-activity, you'll have to make sure that user-agents is installed first::
+1. Install "django-device-activity", you'll have to make sure that user-agents is installed first::
 
     pip install pyyaml ua-parser user-agents
     pip install django-device-activity
