@@ -22,9 +22,9 @@ Quick start
         'device_activity',
     ]
 
-3. Add ``DeviceMiddleware`` in ``settings.py``:
+3. Add ``DeviceMiddleware`` in ``settings.py``::
 
     MIDDLEWARE_CLASSES = (
-        # other middlewares...
+        ...
         'device-activity.middleware.DeviceMiddleware',
-      )
+    )
