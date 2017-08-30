@@ -1,6 +1,6 @@
 import datetime
 
-from modules.account_management.device_activity.models import DeviceActivity
+from device_activity.models import DeviceActivity
 
 class DeviceMiddleware(object):
     """

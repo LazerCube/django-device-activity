@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from modules.account_management.device_activity import views
+from device_activity import views
 
 app_name = 'device_activity'
 urlpatterns = [
