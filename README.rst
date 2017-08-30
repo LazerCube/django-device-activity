@@ -28,3 +28,10 @@ Quick start
         ...
         'device-activity.middleware.DeviceMiddleware',
     )
+
+4. Add the include to ``urls.py``::
+
+    urlpatterns = [
+        ...
+        url(r'^profile/', include('device_activity.urls')),
+    ]
