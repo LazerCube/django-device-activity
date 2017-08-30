@@ -10,4 +10,7 @@ compiled_static/
 media/
 logs/
 
+build/
+*.egg-info/
+
 .DS_Store
