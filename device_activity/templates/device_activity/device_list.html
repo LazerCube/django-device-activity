@@ -1,18 +1,11 @@
 <h1>Device Activity</h1>
 <ul>
-  {% for device in object_list %}
-  <b>{{ device.ip_address }}</b> - {{ device }} - Connected: {{ device.created_at}}
-    <ul>
-      <li>{{ device.get_browser }}</li>
-      <li>{{ device.get_os }}</li>
-      <li>{{ device.get_device }}</li>
-      <li>Mobile: {{ device.is_mobile|yesno:"True,False" }}</li>
-      <li>Tablet: {{ device.is_tablet|yesno:"True,False" }}</li>
-      <li>Is Touch Capable: {{ device.is_touch_capable|yesno:"True,False" }}</li>
-      <li>Is PC: {{ device.is_pc|yesno:"True,False" }}</li>
-      <li>Is Bot: {{ device.is_bot|yesno:"True,False" }}</li>
-    </ul>
-  {% empty %}
-      <li>No devices yet.</li>
-  {% endfor %}
+    {% for device in object_list %}
+    <li>
+        <b>{{ device.ip_address }}</b> - {{ device }} - Connected: {{ device.created_at}}
+        <a href="{% url 'device_activity:device' device.pk %}">Link</a>
+    </li>
+    {% empty %}
+        <li>No devices yet.</li>
+    {% endfor %}
 </ul>

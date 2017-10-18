@@ -1,0 +1,34 @@
+<h1>{{ object}} <small>{{ object.ip_address }}</small></h1>
+{{ object.created_at }}
+
+<h2>Browser</h2>
+
+<ul>
+    <li>Family: {{ object.get_browser.family }}</li>
+    <li>Version: {{ object.get_browser.version_string }}</li>
+</ul>
+
+<h2>Operating System</h2>
+
+<ul>
+    <li>Family: {{ object.get_os.family }}</li>
+    <li>Version: {{ object.get_os.version_string }}</li>
+</ul>
+
+<h2>Device</h2>
+
+<ul>
+    <li>Family: {{ object.get_device.family }}</li>
+    <li>Brand: {{ object.get_device.brand }}</li>
+    <li>Model: {{ object.get_device.model }}</li>
+</ul>
+
+<h2>More</h2>
+
+<ul>
+    <li>Mobile: {{ object.is_mobile|yesno:"True,False" }}</li>
+    <li>Tablet: {{ object.is_tablet|yesno:"True,False" }}</li>
+    <li>Is Touch Capable: {{ object.is_touch_capable|yesno:"True,False" }}</li>
+    <li>Is PC: {{ object.is_pc|yesno:"True,False" }}</li>
+    <li>Is Bot: {{ object.is_bot|yesno:"True,False" }}</li>
+</ul>

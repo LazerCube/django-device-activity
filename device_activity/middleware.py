@@ -4,7 +4,7 @@ from device_activity.models import DeviceActivity
 
 class DeviceMiddleware(object):
     """
-        Save the Ip address if does not exist
+    Save the Ip address if does not exist
     """
     def process_request(self, request):
         if request.user.is_authenticated():
@@ -13,9 +13,8 @@ class DeviceMiddleware(object):
                 ip = x_forwarded_for.split(',')[-1].strip()
             else:
                 ip = request.META.get('REMOTE_ADDR')
-
             try:
-                DeviceActivity.objects.get(ip_address=ip)
+                DeviceActivity.objects.get(ip_address=ip, user=request.user)
             except DeviceActivity.DoesNotExist:
                 ua_string = request.META.get('HTTP_USER_AGENT', '')
                 device = DeviceActivity(ip_address=ip, user=request.user, ua_string=ua_string)
