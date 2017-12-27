@@ -21,7 +21,7 @@ setup(
     install_requires=[
         'pyyaml',
         'ua-parser',
-        'user-agents'
+        'user-agents',
         'uuid'
     ],
     classifiers=[
