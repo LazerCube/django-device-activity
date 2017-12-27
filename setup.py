@@ -22,6 +22,7 @@ setup(
         'pyyaml',
         'ua-parser',
         'user-agents'
+        'uuid'
     ],
     classifiers=[
         'Environment :: Web Environment',
